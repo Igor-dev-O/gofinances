@@ -7,7 +7,7 @@ import { useFocusEffect } from '@react-navigation/native';
 import { HighlightCard } from '../../components/HighlightCard';
 import { TransactionsCard, TransactionsCardProps } from '../../components/TransactionCard';
 import { useTheme } from 'styled-components';
-
+import { RectButtonProps } from "react-native-gesture-handler";
 
 import {
     Container,

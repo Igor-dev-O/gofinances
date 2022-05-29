@@ -14,12 +14,9 @@ import {
 
 
 import theme from './src/global/styles/theme';
-import { NavigationContainer } from '@react-navigation/native';
 
 
-import { AppRoutes } from './src/routes/App.routes';
-
-import { SignIn } from './src/screens/SignIn';
+import { Routes } from './src/routes/index';
 
 import { AuthProvider } from './src/Hooks/auth';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
@@ -42,14 +39,14 @@ export default function App() {
   return (
     <GestureHandlerRootView style={{ flex: 1 }}>
       <ThemeProvider theme={theme}>
-        <NavigationContainer>
-          <StatusBar barStyle="light-content" />
 
-          <AuthProvider>
-            <SignIn />
-          </AuthProvider>
+        <StatusBar barStyle="light-content" />
 
-        </NavigationContainer>
+        <AuthProvider>
+          <Routes />
+        </AuthProvider>
+
+
       </ThemeProvider>
     </GestureHandlerRootView>
   );
