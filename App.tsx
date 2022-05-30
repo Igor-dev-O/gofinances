@@ -18,6 +18,7 @@ import theme from './src/global/styles/theme';
 
 import { Routes } from './src/routes/index';
 
+import { SignIn } from './src/screens/SignIn';
 import { AuthProvider } from './src/Hooks/auth';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 
@@ -43,7 +44,7 @@ export default function App() {
         <StatusBar barStyle="light-content" />
 
         <AuthProvider>
-          <Routes />
+          <SignIn />
         </AuthProvider>
 
 

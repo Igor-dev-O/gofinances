@@ -21,7 +21,7 @@ import {
 } from './styles'
 
 export function SignIn() {
-    const { signInWithGoogle, signInWithApple } = useAuth();
+    const { signInWithGoogle } = useAuth();
 
 
     async function handleSingInWithGoogle() {
@@ -33,12 +33,12 @@ export function SignIn() {
         }
     }
     async function handleSingInWithApple() {
-        try {
-            await signInWithApple();
-        } catch (error) {
-            console.log(error)
-            Alert.alert('Não foi possível conectar a conta Apple')
-        }
+        // try {
+        //     await signInWithApple();
+        // } catch (error) {
+        //     console.log(error)
+        //     Alert.alert('Não foi possível conectar a conta Apple')
+        // }
     }
 
 
